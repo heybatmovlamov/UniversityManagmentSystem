@@ -18,7 +18,7 @@ public class StudentService {
 
     public StudentResponse<String> saveStudent(StudentDto dto) {
         Student student = new Student();
-        student.setUsername(dto.getName());
+        student.setUsername(dto.getUsername());
         studentRepository.save(student);
         return StudentResponse.success("saved");
     }
